@@ -556,6 +556,17 @@ class LocalizedText(FrozenClass):
     def __ne__(self, other):
         return not self.__eq__(other)
 
+class DataTypeDefinition(FrozenClass):
+    ua_types = []
+
+    def __init__(self):
+        self._freeze = True
+
+    def __str__(self):
+        return 'DataTypeDefinition'
+
+    __repr__ = __str__
+
 
 class ExtensionObject(FrozenClass):
     """
